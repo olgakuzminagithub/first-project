@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First project</title>
+        <link type="Image/x-icon" href="./src/img/favicon.ico" rel="icon">
+        <link rel="stylesheet" href="./src/css/reset.css">
+        <link rel="stylesheet" href="./src/css/style.css">
+        <script src="https://kit.fontawesome.com/7e214218fa.js" crossorigin="anonymous"></script>
+        <script src="./src/js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+           <header class="header">
+            <nav class="navbar">
+                <a class="logo navbar__logo">
+                    <svg class="logo__icon" viewBox="0 0 45 36" fill="none">
+                        <rect y="15.5" width="18.3099" height="20" rx="9.15493" fill="#9C69E2"/>
+                        <rect x="26.5493" y="0.5" width="18.3099" height="35" rx="9.15493" fill="#F063B8"/>
+                    </svg>
+                </a>
+                <div class="navbar__icon" onclick="menuFunction()">
+                    <i id="bars" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar__nav" id="navbar">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">About</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Help</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Features</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">Sing up</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="button button-light" href="#">Request Demo</a>
+           </header>
+           <main>
+                <section class="first-screen row">
+                    <div class="col-2">
+                        <h1 class="first-screen__title">
+                            Save your data storage here.
+                        </h1>
+                        <p class="first-screen__text">
+                            Data Warehouse is a data storage area that has been
+                            tested for security, so you can store your data here
+                            safely but not be afraid of being stolen by others.
+                        </p>
+                        <a class="button button-accent" href="#">Learn more</a>
+                    </div>
+                    <div class="col-2">
+                        <img class="first-screen__img" src="./src/img/first-screen-img.svg" alt="data storage vector">
+                    </div>
+                </section>
+                <section class="pink-screen row">
+                    <div class="col-2 pink-screen__img-box">
+                        <img class="pink-screen__img" src="./src/img/second-screen-img.svg" alt="data storage bank">
+                    </div>
+                    <div class="col-2">
+                        <h2 class="pink-screen__title">
+                            We are a high-level data storage bank</h2>
+                        <p>
+                            The place to store various data that you can access
+                            at any time through the internet  and where you can carry it. 
+                        </p>
+                        <p>
+                            This very flexible storage area has a high level of security.
+                            To enter into your own data you must enter the password that
+                            you created when you registered in this Data Warehouse. 
+                        </p>
+                    </div>
+                </section>
+                <section class="features">
+                    <h2 class="features__title">Features</h2>
+                    <p class="features__text">
+                        Some of the features and advantages that we provide for those of
+                         you who store data in this Data Warehouse.
+                    </p>
+                    <div class="row row-with-gap">
+                        <div class="col-2 features__item">
+                            <img class="features__img" src="./src/img/card-image-1.svg" alt="">
+                            <div class="features__box bg-light-blue">
+                                <div class="features__info">
+                                    <h3 class="features__subtitle">Search Data</h3>
+                                    <p class="features__box-text">
+                                        Don’t worry if your data is very large, the Data
+                                        Warehoue provides a search engine, which is useful
+                                        for making it easier to find data effectively saving time.
+                                    </p>
+                                </div>
+                                <a class="features__link" href="">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-2 features__item">
+                            <img class="features__img" src="./src/img/card-image-2.svg" alt="">
+                            <div class="features__box bg-light-lilac">
+                                <div class="features__info">
+                                    <h3 class="features__subtitle">24 Hours Access</h3>
+                                    <p class="features__box-text">
+                                        Access is given 24 hours a full morning to night and
+                                        meet again in the morning, giving you comfort when
+                                        you need data when urgent.
+                                    </p>
+                                </div>
+                                <a class="features__link" href="">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-2 features__item">
+                            <img class="features__img" src="./src/img/card-image-3.svg" alt="">
+                            <div class="features__box bg-light-pink">
+                                <div class="features__info">
+                                    <h3 class="features__subtitle">Print Out</h3>
+                                    <p class="features__box-text">
+                                        Print out service gives you convenience if someday
+                                        you need print data, just edit it all and just print it.
+                                    </p>
+                                </div>
+                                <a class="features__link" href="">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-2 features__item">
+                            <img class="features__img" src="./src/img/card-image-4.svg" alt="">
+                            <div class="features__box bg-light-fiolet">
+                                <div class="features__info">
+                                    <h3 class="features__subtitle">Security Code</h3>
+                                    <p class="features__box-text">
+                                        Data Security is one of our best facilities. Allows for your files
+                                        to be safer. The file can be secured with a code or password that 
+                                        you created, so only you can open the file.
+                                    </p>
+                                </div>
+                                <a class="features__link" href="">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="testimonials">
+                    <h2 class="testimonials__title">Testimonials</h2>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="testimonials__item">
+                                <div class="testimonials__photo">
+                                    <img src="./src/img/photo-1.png" alt="">
+                                </div>
+                                <div class="testimonials__info">
+                                    <span class="testimonials__name">John Fang</span>
+                                    <a class="testimonials__site" href="#" target="_blank" rel="noopener noreferrer">wordfaang.com</a>
+                                    <p class="testimonials__text">
+                                        Suspendisse ultrices at diam lectus nullam. 
+                                    </p>
+                                    <p class="testimonials__text">    
+                                        Nisl, sagittis viverra enim erat tortor ultricies massa turpis.
+                                         Arcu pulvinar aenean nam laoreet nulla.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="testimonials__item">
+                                <div class="testimonials__photo">
+                                    <img src="./src/img/photo-2.png" alt="">
+                                </div>
+                                <div class="testimonials__info">
+                                    <span class="testimonials__name">Hanna Wilson</span>
+                                    <a class="testimonials__site" href="#" target="_blank" rel="noopener noreferrer">wordfaang.com</a>
+                                    <p class="testimonials__text">    
+                                        Nisl, sagittis viverra enim erat tortor ultricies massa turpis.
+                                         Arcu pulvinar aenean nam laoreet nulla.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+           </main>
+           <footer class="footer">
+                <section class="footer__header row">
+                    <div class="col-2">
+                        <h2 class="footer__title">Try for free!</h3>
+                        <p class="footer__text">Get limited 1 week free try our features!</p>
+                    </div>
+                    <div class="col-2 footer__buttons">
+                        <a class="button button-pink" href="#">Learn more</a>
+                        <a class="button button-light" href="#">Request Demo</a>
+                    </div>
+                </section>
+                <section class="footer__navigation row">
+                    <div class="footer__contacts">
+                        <a class="logo footer__logo">
+                            <svg class="logo__icon" viewBox="0 0 45 36" fill="none">
+                                <rect y="15.5" width="18.3099" height="20" rx="9.15493" fill="#9C69E2"/>
+                                <rect x="26.5493" y="0.5" width="18.3099" height="35" rx="9.15493" fill="#F063B8"/>
+                            </svg>
+                            <span class="logo__text">DataWarehouse</span>
+                        </a>
+                        <p class="footer__addres">
+                            Warehouse Society, 234
+                            Bahagia Ave Street 
+                            PRBW 29281
+                        </p>
+                        <a class="footer__contact-link" href="mailto:info@warehouse.project">info@warehouse.project</a>
+                        <a class="footer__contact-link" href="tel:+1-232-3434">1-232-3434 (Main)</a>
+                    </div>
+                    <div class="footer__nav row">
+                        <div class="col-3">
+                            <span class="footer__nav-title">About</span>
+                            <ul>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Profile</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Features</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Careers</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">DW News</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <span class="footer__nav-title">Help</span>
+                            <ul>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Support</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Sing up</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Guide</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Reports</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a class="footer__nav-link" href="#">Q&A</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-3 footer__social-media">
+                            <span class="footer__nav-title">Social Media</span>
+                            <ul class="social-media">
+                                <li class="social-media__item">
+                                    <a class="social-media__link social-media__facebook" href="#"></a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link social-media__twitter" href="#"></a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link social-media__instagram" href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p class="footer__footnote">
+                        © Datawarehouse™, 2020. All rights reserved.
+                        Company Registration Number: 21479524.
+                    </p>
+                </section>
+           </footer>
+        </div>
+    </body>
+</html>

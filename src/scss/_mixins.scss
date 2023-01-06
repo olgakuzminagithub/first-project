@@ -1,0 +1,9 @@
+@mixin media-breakpoint-up($media) {
+    @each $grid-breakpoint, $resolution in $grid-breakpoints {
+        @if $media == $grid-breakpoint {
+        @media only screen and (max-width: $resolution) {
+            @content;
+        }
+        }
+    }
+}

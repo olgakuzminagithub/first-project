@@ -1,0 +1,30 @@
+@import 'fonts';  
+
+$font-title: 'WorkSans', san-serif;
+$font-text: 'Montserrat', san-serif;
+
+$color-title-darck: #212353;
+$color-text-darck:  #4B5D68;
+$color-text-white: #FFFFFF;
+$color-accent: #9C69E2;
+$color-link-text-darck: #212353;
+$color-link-text-light:  #FFFFFF;
+$color-link-text-hover: #8A40EE;
+$color-button-bg-light: #FFFFFF;
+$color-button-bg-light-hover: #9C69E2;
+$color-button-bg-accent: #9C69E2;
+$color-button-bg-accent-hover:#8A40EE;
+$color-button-bg-pink: #F063B8;
+$color-button-bg-pink-hover:#EB4BAB;
+$color-bg-pink: #FDE8F5;
+$color-bg-blue: #CCDDFF;
+
+$grid-breakpoints: (
+    xs: 391px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
