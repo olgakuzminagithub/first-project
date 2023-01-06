@@ -48,12 +48,12 @@ p {
 .row {
     display: flex;
     flex-wrap: wrap;
-    .col-2 {
-        width: 50%;
-    }
-    .col-3 {
-        width: 33.3%;
-    }
+}
+.col-2 {
+    width: 50%;
+}
+.col-3 {
+    width: 33.3%;
 }
 .row-with-gap {
     gap: 30px;
@@ -506,43 +506,160 @@ p {
 /*-------Responsive--------*/
 
 @include media-breakpoint-up(xl) {
-    h1 {
-        font-size: 70px;
-    }
     .container {
-      padding: 0 30px;
+        width: 100%;
+        padding: 0 30px;
+        overflow: hidden;
     }
-}
-
-@include media-breakpoint-up(lg) {
     h1 {
         font-size: 60px;
     }
-    h2 {
-        font-weight: 36px;
+    .first-screen {
+        &__img {
+            width: 120%;
+            margin-inline-start: -20%;
+        }
     }
+    .pink-screen {
+        &__img-box {
+            padding-inline-end: 50px;
+        }
+    }
+    .features {
+        &__box {
+            padding: 42px 50px 42px 100px;
+        }
+    }
+    .testimonials {
+        &__item {
+            height: 350px;
+        }
+    }
+
 }
 
-
-
-@include media-breakpoint-up(md) {
-    .row {
-        .col-2 {
-            width: 100%;
-        }
-        .col-3 {
-            width: 50%;
-        }
+@include media-breakpoint-up(lg) {
+    .col-2 {
+        width: 100%;
     }
     .row-with-gap {
         .col-2 {
             flex: none;
         }
     }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .order-lg-1 {
+        order: 1;
+    }
+    .order-lg-2 {
+        order: 2;
+    }
+    .navbar {
+        &__logo {
+            margin-inline-end: 50px;
+        }
+        &__link {
+            font-size: 14px;
+        }
+    }
+    .first-screen {
+        padding: 0;
+        &__img {
+            width: 100%;
+            margin-inline-start: 0;
+            margin-block-end: 50px;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__text {
+            max-width: none;
+            text-align: center;
+        }
+        &__button {
+            margin: 0 auto;
+            margin-block-end: 50px;
+        }
+    }
+    .pink-screen {
+        &__img-box {
+            display: flex;
+            justify-content: center;
+            padding-inline-end: 0;
+            margin-block-end: 50px;
+        }
+        &__title {
+            text-align: center;
+        }
+    }
+    .features {
+        padding: 50px 0;
+        &__item {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        &__box {
+            max-width: 400px;
+        }
+        &__box-text {
+            font-size: 14px;
+        }
+    }
+    .testimonials {
+        &:after {
+            top: auto;
+            bottom: 0;
+        }
+        &__item {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-block-end: 50px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+    }
+    .footer {
+        &__contacts {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-end: 50px;
+        }
+        &__nav {
+            width: 100%;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__text {
+            text-align: center;
+            margin-block-end: 50px;
+        }
+        &__buttons {
+            justify-content: center;
+        }
+        &__footnote {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+@include media-breakpoint-up(md) {
     .header {
         padding-inline-start: 0;
         padding-inline-end: 0;
-        position: relative;
     }
     .navbar {
         &__logo {
@@ -570,132 +687,107 @@ p {
             align-items: center;
         }
     }
-    .first-screen {
-        padding: 50px 0;
-        &__title {
-            text-align: center;
-        }
-        &__text {
-            width: 100%;
-            max-width: 600px;
-        }
-        &__img {
-            width: 80%;
-            margin-block-start: -100px;
-            margin-inline-start: 0;
-            float: right;
-        }
-    }
-    .pink-screen {
-        &__img-box {
-            display: flex;
-            justify-content: center;
-            margin-block-end: 50px;
-        }
-        &__title {
-            text-align: center;
-        }
-    }
-    .features {
-        &__item {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    }
-    .testimonials {
-        &:after {
-            top: auto;
-            bottom: 0;
-        }
-        &__item {
-            max-width: 600px;
-            margin: 0 auto;
-            margin-block-end: 50px;
-        }
-    }
-    .footer {
-        &__title {
-            text-align: center;
-        }
-        &__text {
-            text-align: center;
-            margin-block-end: 50px;
-        }
-        &__buttons {
-            justify-content: center;
-        }
-        &__contacts {
-            width: 50%;
-        }
-        &__nav {
-            width: 50%;
-        }
-    }
+  
 }
 
 @include media-breakpoint-up(sm) {
-    .button {
-        width: 300px;
-        height: 80px;
-        font-size: 24px;
+    .container {
+        padding: 0 15px;
     }
-    p {
+    .col-3 {
+        width: 50%;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
         font-size: 24px;
     }
     .navbar {
-        &__item {
-            height: 70px;
-        }
-        &__link {
-            font-size: 24px;
+        &__icon {
+            width: 45px;
+            height: 45px;
+            margin-inline-end: 20px;
         }
     }
-    .first-screen {
-        &__text {
-            max-width: 100%;
-        }
+    .button {
+        height: 45px;
+        width: 180px;
+        font-size: 14px;
+    }
+    .pink-screen {
+        padding: 30px;
         &__img {
-            margin-block-start: -50px;
+            max-width: 100%;
         }
     }
     .features {
+        &__item {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        &__img {
+            position: static;
+        }
         &__box {
+            width: 100%;
             padding: 50px;
-            padding-inline-start: 70px;
-        }
-        &__subtitle {
-            font-size: 28px;
-        }
-        &__box-text {
-            font-size: 20px;
-        }
-        &__link {
-            font-size: 22px;
+            padding-block-start: 100px;
+            margin-block-start: -80px;
         }
     }
     .testimonials {
+        padding: 50px 15px;
         &__item {
+            padding: 30px 15px;
+            flex-direction: column;
+            align-items: center;
             height: 400px;
         }
-        &__name {
-            font-size: 22px;
+        &__photo {
+            margin-block-end: 30px;
         }
-        &__site {
-            font-size: 20px;
-        }
-        &__text {
-            font-size: 22px;
+        &__name, &__site {
+            text-align: center;
         }
     }
     .footer {
-        &__contacts {
-            padding-inline-end: 50px;
+        padding: 50px 0;
+        &__buttons {
+            flex-wrap: wrap;
         }
-        &__addres, &__contact-link, &__nav-title, &__nav-link {
-            font-size: 24px;
+        &__addres {
+            text-align: center;
         }
-        &__footnote {
-            font-size: 14px;
+        &__col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-end: 30px;
+        }
+        &__social-media {
+            width: 100%;
+            max-width: none;
+        }
+    }
+    .button-pink {
+        margin-inline-end: 0;
+        margin-block-end: 30px;
+    }
+}
+
+@include media-breakpoint-up(xs) {
+    .col-3 {
+        width: 100%;
+    }
+    .footer {
+        &__social-media {
+            max-width: none;
+        }
+        &__navigation {
+            margin-block-end: 30px;
         }
     }
 
