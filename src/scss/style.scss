@@ -657,6 +657,9 @@ p {
 
 
 @include media-breakpoint-up(md) {
+    .button-light:after {
+        margin-inline-start: 10px;
+    }
     .header {
         padding-inline-start: 0;
         padding-inline-end: 0;
@@ -664,6 +667,7 @@ p {
     .navbar {
         &__logo {
             order: 2;
+            margin-inline-end: 10px;
         }
         &__icon {
             display: flex;
@@ -779,10 +783,23 @@ p {
 }
 
 @include media-breakpoint-up(xs) {
+    .button {
+        height: 45px;
+        width: 160px;
+        font-size: 12px;
+    }
+    .navbar {
+        &__icon {
+            margin-inline-end: 10px;
+        } 
+    }
     .col-3 {
         width: 100%;
     }
     .footer {
+        &__addres, &__contact-link, &__nav-link {
+            font-size: 12px;
+        }
         &__social-media {
             max-width: none;
         }
