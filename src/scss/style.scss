@@ -3,7 +3,6 @@
 
 * {
     box-sizing: border-box;
-    transition: 0.3 sec all;
 }
 
 a {
@@ -723,7 +722,7 @@ p {
         font-size: 14px;
     }
     .pink-screen {
-        padding: 30px;
+        padding: 50px 30px;
         &__img {
             max-width: 100%;
         }
