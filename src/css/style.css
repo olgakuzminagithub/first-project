@@ -727,6 +727,9 @@ p {
   h2 {
     font-size: 24px;
   }
+  h3 {
+    font-size: 18px;
+  }
   .navbar__icon {
     width: 45px;
     height: 45px;
@@ -758,17 +761,23 @@ p {
     padding-block-start: 100px;
     margin-block-start: -80px;
   }
+  .features__link {
+    font-size: 14px;
+  }
   .testimonials {
     padding: 50px 15px;
   }
   .testimonials__item {
-    padding: 30px 15px;
+    padding: 30px;
     flex-direction: column;
     align-items: center;
     height: 400px;
   }
   .testimonials__photo {
     margin-block-end: 30px;
+  }
+  .testimonials__info {
+    width: 100%;
   }
   .testimonials__name, .testimonials__site {
     text-align: center;
@@ -778,6 +787,8 @@ p {
   }
   .footer__buttons {
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
   .footer__addres {
     text-align: center;
