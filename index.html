@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-           <header class="header">
+           <header class="header container">
             <nav class="navbar">
                 <a class="logo navbar__logo">
                     <svg class="logo__icon" viewBox="0 0 45 36" fill="none">
@@ -26,23 +26,23 @@
                 </div>
                 <ul class="navbar__nav" id="navbar">
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">About</a>
+                        <a class="navbar__link" href="#about" onclick="menuFunction()">About</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Help</a>
+                        <a class="navbar__link" href="#help" onclick="menuFunction()">Help</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Features</a>
+                        <a class="navbar__link" href="#features" onclick="menuFunction()">Features</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">Sing up</a>
+                        <a class="navbar__link" href="#sing-up" onclick="menuFunction()">Sing up</a>
                     </li>
                 </ul>
             </nav>
             <a class="button button-light" href="#">Request Demo</a>
            </header>
            <main>
-                <section class="first-screen row">
+                <section class="first-screen row" id="about">
                     <div class="col-2 order-lg-2">
                         <h1 class="first-screen__title">
                             Save your data storage here.
@@ -58,7 +58,7 @@
                         <img class="first-screen__img" src="./src/img/first-screen-img.svg" alt="data storage vector">
                     </div>
                 </section>
-                <section class="pink-screen row">
+                <section class="pink-screen row" id="help">
                     <div class="col-2 pink-screen__img-box">
                         <img class="pink-screen__img" src="./src/img/second-screen-img.svg" alt="data storage bank">
                     </div>
@@ -76,7 +76,7 @@
                         </p>
                     </div>
                 </section>
-                <section class="features">
+                <section class="features" id="features">
                     <h2 class="features__title">Features</h2>
                     <p class="features__text">
                         Some of the features and advantages that we provide for those of
@@ -179,7 +179,7 @@
                     </div>
                 </section>
            </main>
-           <footer class="footer">
+           <footer class="footer" id="sing-up">
                 <div class="footer__header row">
                     <div class="col-2">
                         <h2 class="footer__title">Try for free!</h2>

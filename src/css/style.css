@@ -106,10 +106,14 @@ p {
 }
 
 .header {
-  padding: 32.5px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  background: #FFFFFF;
+  z-index: 100;
 }
 
 .navbar {
@@ -221,6 +225,10 @@ p {
 .button-pink:hover, .button-pink:focus {
   background: #EB4BAB;
   border: 1px solid #EB4BAB;
+}
+
+main {
+  margin-block-start: 100px;
 }
 
 .first-screen {
@@ -554,8 +562,13 @@ p {
 @media only screen and (max-width: 1200px) {
   .container {
     width: 100%;
-    padding: 0 30px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
     overflow: hidden;
+  }
+  .header {
+    margin: 0 -30px;
+    overflow: initial;
   }
   h1 {
     font-size: 60px;
@@ -683,10 +696,6 @@ p {
   .button-light:after {
     margin-inline-start: 10px;
   }
-  .header {
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-  }
   .navbar__logo {
     order: 2;
     margin-inline-end: 10px;
@@ -706,7 +715,7 @@ p {
     background: #fff;
     opacity: 0.9;
     position: absolute;
-    top: 100px;
+    top: 85px;
     left: 15px;
     animation-name: hidden-menu;
     animation-duration: 0.5s;
@@ -719,7 +728,7 @@ p {
     background: #fff;
     opacity: 0.9;
     position: absolute;
-    top: 100px;
+    top: 85px;
     left: -100%;
     animation-name: visible-menu;
     animation-duration: 0.5s;
@@ -750,7 +759,11 @@ p {
 }
 @media only screen and (max-width: 576px) {
   .container {
-    padding: 0 15px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
+  .header {
+    margin: 0 -15px;
   }
   .col-3 {
     width: 50%;
