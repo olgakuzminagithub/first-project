@@ -194,11 +194,11 @@ p {
   margin-inline-start: 20px;
   margin-block-start: 7px;
 }
-.button-light:hover, .button-light:active {
+.button-light:hover, .button-light:focus {
   background: #9C69E2;
   color: #FFFFFF;
 }
-.button-light:hover:after, .button-light:active:after {
+.button-light:hover:after, .button-light:focus:after {
   content: url(../img/arrow-white.svg);
 }
 
@@ -207,7 +207,7 @@ p {
   border: 1px solid #9C69E2;
   color: #FFFFFF;
 }
-.button-accent:hover {
+.button-accent:hover, .button-accent:focus {
   background: #8A40EE;
   border: 1px solid #8A40EE;
 }
@@ -218,7 +218,7 @@ p {
   color: #FFFFFF;
   margin-inline-end: 30px;
 }
-.button-pink:hover {
+.button-pink:hover, .button-pink:focus {
   background: #EB4BAB;
   border: 1px solid #EB4BAB;
 }
@@ -534,19 +534,19 @@ p {
 .social-media__facebook {
   background-position: top -20px left -20px;
 }
-.social-media__facebook:hover {
+.social-media__facebook:hover, .social-media__facebook:focus {
   background-position: top -90px left -20px;
 }
 .social-media__twitter {
   background-position: top -20px left -85px;
 }
-.social-media__twitter:hover {
+.social-media__twitter:hover, .social-media__twitter:focus {
   background-position: top -90px left -85px;
 }
 .social-media__instagram {
   background-position: top -20px left -150px;
 }
-.social-media__instagram:hover {
+.social-media__instagram:hover, .social-media__instagram:focus {
   background-position: top -90px left -150px;
 }
 
@@ -699,18 +699,53 @@ p {
   .navbar__nav {
     display: none;
   }
+  .navbar__nav_hidden {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    opacity: 0.9;
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    animation-name: hidden-menu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
   .navbar__nav_visible {
     display: block;
     width: 100%;
+    height: 100vh;
     background: #fff;
+    opacity: 0.9;
     position: absolute;
-    top: 120px;
+    top: 100px;
+    left: -100%;
+    animation-name: visible-menu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
   }
   .navbar__item {
     height: 50px;
     border-bottom: 1px solid #4B5D68;
     display: flex;
     align-items: center;
+  }
+}
+@keyframes visible-menu {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 15px;
+  }
+}
+@keyframes hidden-menu {
+  0% {
+    left: 15px;
+  }
+  100% {
+    left: -100%;
   }
 }
 @media only screen and (max-width: 576px) {

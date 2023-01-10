@@ -147,7 +147,7 @@ p {
         margin-inline-start: 20px;
         margin-block-start: 7px;
     }
-    &:hover, &:active {
+    &:hover, &:focus {
         background: $color-accent;
         color: $color-text-white;
         &:after {
@@ -160,7 +160,7 @@ p {
     background: $color-button-bg-accent;
     border: 1px solid $color-button-bg-accent;
     color: $color-text-white;
-    &:hover {
+    &:hover, &:focus {
         background: $color-button-bg-accent-hover;
         border: 1px solid $color-button-bg-accent-hover;
     }
@@ -171,7 +171,7 @@ p {
     border: 1px solid $color-button-bg-pink;
     color: $color-text-white;
     margin-inline-end: 30px;
-    &:hover {
+    &:hover, &:focus {
         background: $color-button-bg-pink-hover;
         border: 1px solid $color-button-bg-pink-hover;
     }
@@ -482,21 +482,20 @@ p {
         background-image: url(../img/socials-sprite.png);
     }
     &__facebook {
-        
         background-position:  top -20px left -20px;
-        &:hover {
+        &:hover, &:focus {
             background-position:  top -90px left -20px;
         }
     }
     &__twitter {
         background-position:  top -20px left -85px;
-        &:hover {
+        &:hover,  &:focus {
             background-position:  top -90px left -85px;
         }
     }
     &__instagram {
         background-position:  top -20px left -150px;
-        &:hover {
+        &:hover,  &:focus {
             background-position:  top -90px left -150px;
         }
     }
@@ -676,12 +675,31 @@ p {
         &__nav {
             display: none;
         }
+        &__nav_hidden {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            opacity: 0.9;
+            position: absolute;
+            top: 100px;
+            left: 15px;
+            animation-name: hidden-menu;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
         &__nav_visible {
             display: block;
             width: 100%;
+            height: 100vh;
             background: #fff;
+            opacity: 0.9;
             position: absolute;
-            top: 120px;
+            top: 100px;
+            left: -100%;
+            animation-name: visible-menu;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
         }
         &__item {
             height: 50px;
@@ -691,6 +709,16 @@ p {
         }
     }
   
+}
+
+@keyframes visible-menu {
+    0% {left: -100%;}
+    100% {left: 15px}
+}
+
+@keyframes hidden-menu {
+    0% {left: 15px}
+    100% {left: -100%}
 }
 
 @include media-breakpoint-up(sm) {
